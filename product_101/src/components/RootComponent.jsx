@@ -8,7 +8,7 @@ class RootComponent extends Component {
       <div>
         <header className="App-header">
           <img src={Product} className="App-logo" alt="logo" />
-          <p className="m-3">Product 101</p>
+          <p className="mt-4">Product 101</p>
           <Link to="/introduction">
             <button className="button-primary">Dive in!</button>
           </Link>
