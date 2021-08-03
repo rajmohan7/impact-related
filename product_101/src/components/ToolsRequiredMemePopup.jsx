@@ -10,8 +10,9 @@ const customStyles = {
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
     overflow: "auto",
-    height: "90%",
+    height: "70%",
     justifyContent: "center",
+    backgroundColor: "#5f5a5a"
   },
 };
 

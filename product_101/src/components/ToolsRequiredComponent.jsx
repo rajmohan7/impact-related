@@ -32,9 +32,9 @@ class ToolsRequiredComponent extends Component {
           }}
         />
         {this.state.showArchitecture ? (
-          <h2 className="main-heading">Architecture diagram</h2>
+          <h2 className="main-heading">ARCHITECTURE DIAGRAM</h2>
         ) : (
-          <h2 className="main-heading">How many developers do I need?</h2>
+          <h2 className="main-heading">HOW MANY DEVELOPERS DO I NEED?</h2>
         )}
         <div>
           <img
@@ -114,7 +114,7 @@ class ToolsRequiredComponent extends Component {
                     </div>
                     <nav
                       id={"sidebarForTool"}
-                      className={"active mt-4 ml-4"}
+                      className={"active mt-3 ml-4"}
                       title={"Product memes"}
                       onClick={() =>
                         this.setState({
@@ -164,7 +164,7 @@ class ToolsRequiredComponent extends Component {
                     </div>
                     <nav
                       id={"sidebarForTool"}
-                      className={"active mt-4 ml-4"}
+                      className={"active mt-3 ml-4"}
                       title={"Product memes"}
                       onClick={() =>
                         this.setState({
@@ -204,7 +204,7 @@ class ToolsRequiredComponent extends Component {
                     </div>
                     <nav
                       id={"sidebarForTool"}
-                      className={"active mt-4 ml-4"}
+                      className={"active mt-3 ml-4"}
                       title={"Product memes"}
                       onClick={() =>
                         this.setState({
@@ -235,7 +235,7 @@ class ToolsRequiredComponent extends Component {
                     </div>
                     <nav
                       id={"sidebarForTool"}
-                      className={"active mt-4 ml-4"}
+                      className={"active mt-3 ml-4"}
                       title={"Product memes"}
                       onClick={() =>
                         this.setState({
@@ -273,7 +273,7 @@ class ToolsRequiredComponent extends Component {
                     </div>
                     <nav
                       id={"sidebarForTool"}
-                      className={"active mt-4 ml-4"}
+                      className={"active mt-3 ml-4"}
                       title={"Product memes"}
                       onClick={() =>
                         this.setState({
