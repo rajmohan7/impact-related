@@ -15,27 +15,36 @@ class IntroductionComponent extends Component {
   render() {
     return (
       <div>
-        <img id="logoImgLeft" src={CompanyLogo} alt="Logo of the company" />
-        <h2>Evolution of a product</h2>
-        <div className="mt-2">
+        <img
+          id="logoImgLeft"
+          src={CompanyLogo}
+          alt="Logo of the company"
+          onClick={() => {
+            this.props.history.push("/");
+          }}
+        />
+        <h2 className="main-heading">EVOLUTION OF A PRODUCT</h2>
+        <div className="mt-4">
           {this.state.showProductPieChart ? (
             <img
               src={ProductPieChart}
               width="1200"
-              className="border"
+              height="600"
+              className="border mr-2"
               alt="Product pie chart"
             />
           ) : (
             <img
               src={EvolutionOfProduct}
               width="1200"
-              className="border"
+              height="600"
+              className="border mr-2"
               alt="Evolution of product"
             />
           )}
         </div>
         <button
-          className="button-primary mt-2"
+          className="button-primary mt-3"
           onClick={
             !this.state.showProductPieChart
               ? () => {
@@ -49,18 +58,13 @@ class IntroductionComponent extends Component {
           }
         >
           {this.state.showProductPieChart
-            ? `Show me the tools required!`
-            : `How do we build the ideal product?`}
+            ? `Show me the tools required !`
+            : `How do we build the ideal product ?`}
         </button>
 
         <nav
-          id={"sidebarMiniInactive"}
+          id={"memeIconStyle"}
           className={"active mt-1 mr-2"}
-          style={{
-            backgroundColor: "#44677b",
-            cursor: "pointer",
-            visibility: "visible",
-          }}
           title={"Product memes"}
           onClick={() =>
             this.setState({
@@ -68,11 +72,7 @@ class IntroductionComponent extends Component {
             })
           }
         >
-          <i
-            className="fa fa-lightbulb-o"
-            aria-hidden="true"
-            style={{ color: "#ffffff" }}
-          ></i>
+          <i className="fa fa-lightbulb-o" aria-hidden="true"></i>
         </nav>
 
         {this.state.showProductMemesPopup ? (

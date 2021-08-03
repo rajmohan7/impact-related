@@ -8,7 +8,9 @@ class RootComponent extends Component {
       <div>
         <header className="App-header">
           <img src={Product} className="App-logo" alt="logo" />
-          <p className="mt-4">Product 101</p>
+          <p className="mt-4" style={{ color: "#000058", fontWeight: "bold" }}>
+            Product 101
+          </p>
           <Link to="/introduction">
             <button className="button-primary">Dive in!</button>
           </Link>

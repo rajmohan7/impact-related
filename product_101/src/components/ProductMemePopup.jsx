@@ -5,15 +5,16 @@ import Modal from "react-modal";
 
 const customStyles = {
   content: {
-    top: "50%",
+    top: "53%",
     left: "50%",
     right: "5%",
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
     overflow: "auto",
-    height: "90%",
+    height: "85%",
     justifyContent: "center",
+    backgroundColor: "#5f5a5a"
   },
 };
 

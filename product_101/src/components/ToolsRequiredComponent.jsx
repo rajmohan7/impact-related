@@ -8,6 +8,7 @@ import MemeOnSonarcloud from "../Images/MemeOnSonarcloud.png";
 import MemeOnInstances from "../Images/MemeOnInstances.png";
 import MemeOnQA from "../Images/MemeOnQA.png";
 import MemeOnProductRelease from "../Images/MemeOnProductRelease.jpeg";
+import CompanyLogo from "../Images/Logo-IA.svg";
 
 class ToolsRequiredComponent extends Component {
   constructor(props) {
@@ -22,10 +23,18 @@ class ToolsRequiredComponent extends Component {
   render() {
     return (
       <div>
+        <img
+          id="logoImgLeft"
+          src={CompanyLogo}
+          alt="Logo of the company"
+          onClick={() => {
+            this.props.history.push("/");
+          }}
+        />
         {this.state.showArchitecture ? (
-          <h2>Architecture diagram</h2>
+          <h2 className="main-heading">Architecture diagram</h2>
         ) : (
-          <h2>How many developers do I need?</h2>
+          <h2 className="main-heading">How many developers do I need?</h2>
         )}
         <div>
           <img
@@ -35,7 +44,8 @@ class ToolsRequiredComponent extends Component {
                 : HowManyDevelopers
             }
             width="1200"
-            className="border"
+            height={this.state.showArchitecture ? "800" : "600"}
+            className="border mr-2"
             alt="Product pie chart"
           />
         </div>
@@ -62,14 +72,14 @@ class ToolsRequiredComponent extends Component {
         {this.state.showToolsRequired ? (
           <div className="my-3">
             <table
-              style={{ width: "60%", margin: "0 auto", textAlign: "center" }}
+              style={{ width: "67%", margin: "0 20.5%", textAlign: "center" }}
             >
               <tr>
-                <th> Category</th>
-                <th>Tool(s)</th>
+                <th className="table-content">Category</th>
+                <th className="table-content">Tool(s)</th>
               </tr>
               <tr>
-                <td>UI/ UX-related</td>
+                <td className="table-content">UI/ UX-related</td>
                 <td>
                   <div className="row">
                     <div
@@ -92,15 +102,19 @@ class ToolsRequiredComponent extends Component {
                     >
                       <div className="text-in-square">{"Google Analytics"}</div>
                     </div>
-
+                    <div
+                      className="square ml-2"
+                      onClick={() => {
+                        window.open(
+                          "https://console.firebase.google.com/u/0/project/assortsmart/storage/assortsmart.appspot.com/files"
+                        );
+                      }}
+                    >
+                      <div className="text-in-square">{"Firebase"}</div>
+                    </div>
                     <nav
                       id={"sidebarForTool"}
-                      className={"active mt-3 ml-2"}
-                      style={{
-                        backgroundColor: "#44677b",
-                        cursor: "pointer",
-                        visibility: "visible",
-                      }}
+                      className={"active mt-4 ml-4"}
                       title={"Product memes"}
                       onClick={() =>
                         this.setState({
@@ -109,17 +123,13 @@ class ToolsRequiredComponent extends Component {
                         })
                       }
                     >
-                      <i
-                        className="fa fa-lightbulb-o"
-                        aria-hidden="true"
-                        style={{ color: "#ffffff" }}
-                      ></i>
+                      <i className="fa fa-lightbulb-o" aria-hidden="true"></i>
                     </nav>
                   </div>
                 </td>
               </tr>
               <tr>
-                <td>Pre-development related</td>
+                <td className="table-content">Pre-development related</td>
                 <td>
                   <div className="row">
                     <div
@@ -154,12 +164,7 @@ class ToolsRequiredComponent extends Component {
                     </div>
                     <nav
                       id={"sidebarForTool"}
-                      className={"active mt-3 ml-3"}
-                      style={{
-                        backgroundColor: "#44677b",
-                        cursor: "pointer",
-                        visibility: "visible",
-                      }}
+                      className={"active mt-4 ml-4"}
                       title={"Product memes"}
                       onClick={() =>
                         this.setState({
@@ -168,17 +173,13 @@ class ToolsRequiredComponent extends Component {
                         })
                       }
                     >
-                      <i
-                        className="fa fa-lightbulb-o"
-                        aria-hidden="true"
-                        style={{ color: "#ffffff" }}
-                      ></i>
+                      <i className="fa fa-lightbulb-o" aria-hidden="true"></i>
                     </nav>
                   </div>
                 </td>
               </tr>
               <tr>
-                <td>Backend related</td>
+                <td className="table-content">Backend related</td>
                 <td>
                   <div className="row">
                     <div
@@ -203,12 +204,7 @@ class ToolsRequiredComponent extends Component {
                     </div>
                     <nav
                       id={"sidebarForTool"}
-                      className={"active mt-3 ml-3"}
-                      style={{
-                        backgroundColor: "#44677b",
-                        cursor: "pointer",
-                        visibility: "visible",
-                      }}
+                      className={"active mt-4 ml-4"}
                       title={"Product memes"}
                       onClick={() =>
                         this.setState({
@@ -217,25 +213,21 @@ class ToolsRequiredComponent extends Component {
                         })
                       }
                     >
-                      <i
-                        className="fa fa-lightbulb-o"
-                        aria-hidden="true"
-                        style={{ color: "#ffffff" }}
-                      ></i>
+                      <i className="fa fa-lightbulb-o" aria-hidden="true"></i>
                     </nav>
                   </div>
                 </td>
               </tr>
 
               <tr>
-                <td>Testing related</td>
+                <td className="table-content">Testing related</td>
                 <td>
                   <div className="row">
                     <div
                       className="square ml-2"
                       onClick={() => {
                         window.open(
-                          "https://console.cloud.google.com/compute/instances?project=calvin-klein-27"
+                          "https://www.blazemeter.com/blog/what%E2%80%99s-the-max-number-of-users-you-can-test-on-jmeter"
                         );
                       }}
                     >
@@ -243,12 +235,7 @@ class ToolsRequiredComponent extends Component {
                     </div>
                     <nav
                       id={"sidebarForTool"}
-                      className={"active mt-3 ml-3"}
-                      style={{
-                        backgroundColor: "#44677b",
-                        cursor: "pointer",
-                        visibility: "visible",
-                      }}
+                      className={"active mt-4 ml-4"}
                       title={"Product memes"}
                       onClick={() =>
                         this.setState({
@@ -257,17 +244,13 @@ class ToolsRequiredComponent extends Component {
                         })
                       }
                     >
-                      <i
-                        className="fa fa-lightbulb-o"
-                        aria-hidden="true"
-                        style={{ color: "#ffffff" }}
-                      ></i>
+                      <i className="fa fa-lightbulb-o" aria-hidden="true"></i>
                     </nav>
                   </div>
                 </td>
               </tr>
               <tr>
-                <td>Deployment related</td>
+                <td className="table-content">Deployment related</td>
                 <td>
                   <div className="row">
                     <div
@@ -290,12 +273,7 @@ class ToolsRequiredComponent extends Component {
                     </div>
                     <nav
                       id={"sidebarForTool"}
-                      className={"active mt-3 ml-3"}
-                      style={{
-                        backgroundColor: "#44677b",
-                        cursor: "pointer",
-                        visibility: "visible",
-                      }}
+                      className={"active mt-4 ml-4"}
                       title={"Product memes"}
                       onClick={() =>
                         this.setState({
@@ -304,11 +282,7 @@ class ToolsRequiredComponent extends Component {
                         })
                       }
                     >
-                      <i
-                        className="fa fa-lightbulb-o"
-                        aria-hidden="true"
-                        style={{ color: "#ffffff" }}
-                      ></i>
+                      <i className="fa fa-lightbulb-o" aria-hidden="true"></i>
                     </nav>
                   </div>
                 </td>

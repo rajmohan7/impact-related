@@ -15,9 +15,16 @@ class SprintComponent extends Component {
   render() {
     return (
       <div>
-        <img id="logoImgLeft" src={CompanyLogo} alt="Logo of the company" />
-        <h2>Evolution of a sprint</h2>
-        <div className="mt-2">
+        <img
+          id="logoImgLeft"
+          src={CompanyLogo}
+          alt="Logo of the company"
+          onClick={() => {
+            this.props.history.push("/");
+          }}
+        />
+        <h2 className="main-heading">EVOLUTION OF A SPRINT</h2>
+        <div className="mt-4">
           <img
             src={SprintEvolution}
             width="1200"
@@ -26,7 +33,7 @@ class SprintComponent extends Component {
           />
         </div>
         <button
-          className="button-primary mt-2"
+          className="button-primary mt-3"
           onClick={() => {
             this.props.history.push("/conclusion");
           }}
@@ -35,13 +42,8 @@ class SprintComponent extends Component {
         </button>
 
         <nav
-          id={"sidebarMiniInactive"}
+          id={"memeIconStyle"}
           className={"active mt-1 mr-2"}
-          style={{
-            backgroundColor: "#44677b",
-            cursor: "pointer",
-            visibility: "visible",
-          }}
           title={"Product memes"}
           onClick={() =>
             this.setState({
@@ -49,11 +51,7 @@ class SprintComponent extends Component {
             })
           }
         >
-          <i
-            className="fa fa-lightbulb-o"
-            aria-hidden="true"
-            style={{ color: "#ffffff" }}
-          ></i>
+          <i className="fa fa-lightbulb-o" aria-hidden="true"></i>
         </nav>
 
         {this.state.showSprintMemesPopup ? (
