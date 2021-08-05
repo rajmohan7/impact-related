@@ -7,7 +7,6 @@ import MemeOnUI from "../Images/MemeOnUI.png";
 import MemeOnSonarcloud from "../Images/MemeOnSonarcloud.png";
 import MemeOnInstances from "../Images/MemeOnInstances.png";
 import MemeOnQA from "../Images/MemeOnQA.png";
-import MemeOnProductRelease from "../Images/MemeOnProductRelease.jpeg";
 import CompanyLogo from "../Images/Logo-IA.svg";
 
 class ToolsRequiredComponent extends Component {
@@ -271,19 +270,6 @@ class ToolsRequiredComponent extends Component {
                     >
                       <div className="text-in-square">{"Ansible"}</div>
                     </div>
-                    <nav
-                      id={"sidebarForTool"}
-                      className={"active mt-3 ml-4"}
-                      title={"Product memes"}
-                      onClick={() =>
-                        this.setState({
-                          showToolsMemePopup: true,
-                          imageList: [MemeOnProductRelease],
-                        })
-                      }
-                    >
-                      <i className="fa fa-lightbulb-o" aria-hidden="true"></i>
-                    </nav>
                   </div>
                 </td>
               </tr>

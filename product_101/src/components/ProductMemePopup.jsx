@@ -41,7 +41,7 @@ class ProductMemePopup extends Component {
           <img
             src={MemeOnProduct2}
             width="1200"
-            className="border m-2"
+            className="border m-2 high-margin-top"
             alt="Evolution of product"
           />
         </div>

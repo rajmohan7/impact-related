@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import CompanyLogo from "../Images/Logo-IA.svg";
-import MemeOnDevelopers from "../Images/MemeOnDevelopers.jpg";
+import MemeOnProductRelease from "../Images/MemeOnProductRelease.jpeg";
 import SprintEvolution from "../Images/SprintEvolution.png";
 import ToolsRequiredMemePopup from "./ToolsRequiredMemePopup";
 
@@ -62,7 +62,7 @@ class SprintComponent extends Component {
                 showSprintMemesPopup: !this.state.showSprintMemesPopup,
               });
             }}
-            imageList={[MemeOnDevelopers]}
+            imageList={[MemeOnProductRelease]}
           />
         ) : null}
       </div>

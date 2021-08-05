@@ -172,3 +172,7 @@ body {
   font-size: calc(10px + 1vmin);
   font-weight: bold;
 }
+
+.high-margin-top{
+  margin-top: 7% !important;
+}
